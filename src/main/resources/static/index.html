@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <title>ClickHouse Data Ingestion Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>🚀 Data Ingestion Dashboard</h1>
+
+    <div class="section">
+        <label for="sourceSelect">Choose Source:</label>
+        <select id="sourceSelect">
+            <option value="clickhouse">ClickHouse</option>
+            <option value="csv">Flat File (CSV)</option>
+        </select>
+    </div>
+
+    <div id="clickhouseFields" class="section hidden">
+        <input type="text" id="host" placeholder="Host URL">
+        <input type="text" id="port" placeholder="Port (8443)">
+        <input type="text" id="database" placeholder="Database">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="jwt" placeholder="JWT Token">
+        <button onclick="loadTables()">Connect to ClickHouse</button>
+    </div>
+
+    <div id="csvFields" class="section hidden">
+        <input type="file" id="csvFile" accept=".csv">
+        <input type="text" id="delimiter" placeholder="Delimiter (e.g., ,)">
+        <button onclick="loadCSV()">Load CSV</button>
+    </div>
+
+    <div class="section" id="columnsSection" class="hidden">
+        <h3>Select Columns:</h3>
+        <div id="columnList"></div>
+    </div>
+
+    <div class="section">
+        <button class="ingest-btn" onclick="startIngestion()">🚀 Start Ingestion</button>
+    </div>
+
+    <div class="status" id="statusArea"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
